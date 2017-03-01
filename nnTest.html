@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MNIST Digits Simples</title>
+    <!-- script src="./node_modules/mnist/dist/mnist.js"></script-->
+    <script src="./lib/sketchpad.js?v1.1"></script>
+    <script src="./dist/build.js"></script>
+    <script>
+        console.log(window["nn"]);
+    </script>
+    <style>
+        body {
+            margin: 10px;
+            padding: 10px;
+            font-family:Arial;
+        }
+        #container {
+            position:relative;
+            width: 500px;
+        }
+        #sketchpad {
+            border: 5px solid #c0f0ff;
+        }
+        #thumbnail {
+            border: 1px solid #c0f0ff;
+        }
+        #result {
+            font-size: 128pt; 
+            float: right;
+            width: 120px;
+            height: 285px;
+            border: 5px solid #fff;
+            text-align: center;
+            line-height: 280px;
+        }
+        .title{
+            font-size: 25px;
+            font-weight: bold;
+            width: 280px;
+            text-align: center;
+            display: block;
+            margin: 0px 0px 10px;
+        }
+        .buttons{
+            width: 285px;
+        }
+        button{
+            padding: 10px 15px;
+            font-size: 15px;
+            background: #c0f0ff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover{
+            background: #53c7ec;
+        }
+        #sketchClearButton{
+            float: left;
+        }
+        #sketchRecogniseButton{
+            float: right;
+            padding: 10px 27px;
+        }
+    </style>
+</head>
+<body>
+    <div class='title'>Нарисуйте цифру </div>
+    <div id="container">
+        <canvas id="sketchpad" width="280" height="280"></canvas>
+        <canvas id="thumbnail" width="28" height="28"></canvas>
+        <div id="result"></div>
+        
+    </div>
+    <div class="buttons">
+        <button type="button" id="sketchClearButton">Очистить поле</button>
+        <button type="button" id="sketchRecogniseButton">Распознать</button>
+    </div>
+</body>
+</html>

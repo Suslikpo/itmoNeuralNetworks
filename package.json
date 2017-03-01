@@ -1,0 +1,16 @@
+{
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ApelSYN/mnist_brain.git"
+  },
+  "dependencies": {
+    "brain.js": "^0.7.0",
+    "mnist": "git+https://github.com/ApelSYN/mnist.git"
+  },
+  "devDependencies": {
+    "webpack": "*",
+    "json-loader": "^0.5.4"
+  },
+  "engine": "node >= 4.2.0"
+}
